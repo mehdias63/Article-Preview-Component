@@ -10,7 +10,7 @@ function App() {
     setIsSubmited(true);
   }
   return (
-    <main className="bg-light-blue min-h-screen flex justify-center items-center px-6 py-16 md:p-16 lg:px-[8rem]">
+    <main className="bg-light-blue min-h-screen flex justify-center items-center px-6 py-16 md:p-16">
       <div className="md:flex font-man bg-white rounded-xl shadow-[0_40px_40px_-10px_rgba(201,213,225,0.50)] md:max-w-[46rem] ">
         <div className="rounded-t-xl md:rounded-bl-xl  h-[14rem] w-full overflow-hidden md:h-auto bg-[url(/images/drawers.jpg)] bg-cover"></div>
         <div>
