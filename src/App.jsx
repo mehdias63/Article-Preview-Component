@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import IconShare from "./components/IconShare";
 
 function App() {
@@ -42,30 +42,26 @@ function App() {
               <img src="/images/icon-share.svg" alt="icon" />
             </div>
           </div>
-          {isSharePanelVisible ? (
-            <></>
-          ) : (
-            <>
-              <div className="relative">
-                <div className="bg-dark-gray flex gap-5 px-6 py-5 rounded-b-xl absolute bottom-2 left-0 right-0 md:-right-[3.05rem] md:bottom-[5.5rem] md:left-auto md:h-auto md:w-auto md:rounded-xl">
-                  <p className="text-light-gray font-medium text-[0.8125rem] leading-5 tracking-[0.3125rem]">
-                    SHARE
-                  </p>
-                  <div className="flex gap-3 w-[5.75rem] h-[1.25rem] justify-center items-center">
-                    <img src="/images/icon-facebook.svg" alt="facebook" />
-                    <img src="/images/icon-twitter.svg" alt="twitter" />
-                    <img src="/images/icon-pinterest.svg" alt="pinterest" />
-                  </div>
-                  <div
-                    onClick={handleSubmitBack}
-                    className="w-8 h-8 bg-light-gray rounded-full flex justify-center items-center ml-auto md:hidden"
-                  >
-                    <IconShare className="fill-white w-4" />
-                  </div>
-                  <div className="border-t-dark-gray hidden md:block border-[1rem] border-transparent absolute left-[50%] top-[3.5rem]"></div>
+          {!isSharePanelVisible && (
+            <div className="relative" onClick={handleSubmitBack}>
+              <div className="bg-dark-gray flex gap-5 px-6 py-5 rounded-b-xl absolute bottom-2 left-0 right-0 md:-right-[3.05rem] md:bottom-[5.5rem] md:left-auto md:h-auto md:w-auto md:rounded-xl">
+                <p className="text-light-gray font-medium text-[0.8125rem] leading-5 tracking-[0.3125rem]">
+                  SHARE
+                </p>
+                <div className="flex gap-3 w-[5.75rem] h-[1.25rem] justify-center items-center">
+                  <img src="/images/icon-facebook.svg" alt="facebook" />
+                  <img src="/images/icon-twitter.svg" alt="twitter" />
+                  <img src="/images/icon-pinterest.svg" alt="pinterest" />
                 </div>
+                <div
+                  onClick={handleSubmitBack}
+                  className="w-8 h-8 bg-light-gray rounded-full flex justify-center items-center ml-auto md:hidden"
+                >
+                  <IconShare className="fill-white w-4" />
+                </div>
+                <div className="border-t-dark-gray hidden md:block border-[1rem] border-transparent absolute left-[50%] top-[3.5rem]"></div>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
